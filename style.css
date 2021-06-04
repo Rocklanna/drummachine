@@ -1,0 +1,86 @@
+:root {
+  --main-color:#6666ff;
+  --drum-border:#e6b800;
+  --drum-body:#ccccff;
+}
+
+* {
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+#drum-machine {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#drumBoard {
+  width: 650px;
+  height: 300px;
+  border: 4px solid var(--drum-border);
+  background-color: var(--drum-body);
+  display: flex;
+}
+
+#pads {
+  width: 60%;
+  border: 4px solid blue;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+}
+
+#controls {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+button {
+  width: 90px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  border: none;
+  box-shadow: 1px 1px 10px 1px;
+  margin: 5px;
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+#display {
+  width: 150px;
+  height: 50px;
+  background-color: var(--main-color);
+  text-align: center;
+  padding-top: 10px;
+}
+
+#power, #display, #volume, #bank {
+  margin-bottom: 20px;
+}
+
+@keyframes focus-highlight {
+  0% {
+    background-color: red;
+  }
+}
+button:focus {
+  animation: focus-highlight 2s;
+  outline: none;
+}
+
+#pads:focus {
+  outline: none;
+}
